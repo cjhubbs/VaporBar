@@ -1,13 +1,13 @@
 {
-    "name": "vapor",
+    "name": "vaporbar",
     "description": "A minimal, responsive theme for Ghost.",
-    "version": "1.6.0",
+    "version": "0.1.0",
     "engines": {
         "ghost": ">=2.0.0"
     },
     "license": "MIT",
     "author": {
-        "email": "seth.lilly@gmail.com"
+        "email": "chris@chrishubbs.com"
     },
     "keywords": [
         "ghost",
