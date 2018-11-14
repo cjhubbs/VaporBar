@@ -1,5 +1,5 @@
 # About
-VaporBar is a fork of [Seth Lilly's Vapor](https://github.com/sethlilly/Vapor/) with a sidebar added that I hacked in from the Casper theme. It, like Vapor, is compatible with Ghost 2.0.
+VaporBar is a fork of [Seth Lilly's Vapor](https://github.com/sethlilly/Vapor/) with a sidebar added that I hacked in from [AfterType's Ascend theme](http://ascend.aftertype.com/). It, like Vapor, is compatible with Ghost 2.0.
 
 ## Contributing and Forking
 
@@ -7,5 +7,7 @@ VaporBar is a fork of [Seth Lilly's Vapor](https://github.com/sethlilly/Vapor/) 
 
 ## Copyright & License
 
+Vapor is released under the MIT license.
+Ascend is released under the ISC license.
 Copyright (c) 2018 Chris Hubbs - Released under The MIT License.
 
