@@ -20,11 +20,12 @@
 <body class="{{body_class}}">
 
     <header id="site-head">
-        {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><div class="bloglogo" style="background: url({{@blog.logo}})"></div></a>{{/if}}
         <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
         {{> header-description}}
         {{!> menu}}
     </header>
+
+    {{>sidebar}}
 
     {{{body}}}
 
@@ -48,6 +49,14 @@
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset 'js/ghostHunter.js'}}"></script>
 
+    //Initialize ghostHunter
+    <script>
+      $("#search-field").ghostHunter({
+        results   : "#results",
+        onKeyUp: true
+      });
+    </script>
 </body>
 </html>

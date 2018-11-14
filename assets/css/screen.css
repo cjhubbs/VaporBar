@@ -85,9 +85,17 @@ article,
 article.preview,
 a.archive-link,
 .article-nav {
-  margin: 20px auto;
-  max-width: 600px;
-  width: 90%;
+
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 300px;
+  margin-top: 40px;
+  padding: 0 42px;
+  position: relative;
+  max-width: 1090px;
+
 }
 #site-head img {
   max-width: 100%;
@@ -142,6 +150,176 @@ header.article-header,
 header.page-header {
   margin-bottom: 3em;
 }
+
+/* ====================================
+* 1. HEADER (SIDEBAR)
+==================================== */
+#main-head-asnd {
+  border-right: 1px solid lightgrey;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 300px;
+  z-index: 100;
+}
+#head-wrapper-asnd {
+  bottom: 0;
+  left: 0;
+  padding: 42px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 110;
+}
+#main-logo-asnd {
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+  width: auto;
+}
+#main-name-asnd {
+  font-size: 1.4em;
+  margin: 0;
+  position: relative;
+}
+#main-name-asnd a {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+#main-name-asnd a:hover {
+  color: #7ad3aa;
+}
+#the-description-asnd {
+  color: #bdbdbd;
+  display: none;
+  font-size: 0.78em;
+  font-style: italic;
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin: 0;
+  margin-top: 26px;
+}
+.home-template #the-description-asnd {
+  display: block;
+}
+#main-nav-asnd {
+  margin: 26px 0;
+  position: relative;
+}
+#main-nav-asnd ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#main-nav-asnd a {
+  border-bottom: 1px solid transparent;
+  color: #363636;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+#main-nav-asnd a:hover {
+  border-color: #7ad3aa;
+  color: #7ad3aa;
+}
+#social-links-head-asnd {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#social-links-head-asnd li {
+  display: inline-block;
+  vertical-align: top;
+}
+#social-links-head-asnd li + li {
+  margin-left: 10px;
+}
+#social-links-head-asnd a {
+  color: #363636;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+#social-links-head-asnd .twitter:hover {
+  color: #4099ff;
+}
+#social-links-head-asnd .facebook:hover {
+  color: #3b5998;
+}
+#mobile-menu-ignite-asnd {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  display: none;
+  line-height: 42px;
+  position: fixed;
+  left: 0;
+  text-align: center;
+  top: 16px;
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+  width: 42px;
+  z-index: 120;
+}
+#mobile-menu-ignite-asnd .fa-arrow-left {
+  display: none;
+}
+@media screen and (max-width: 1089px) {
+  #main-head-asnd {
+    width: 190px;
+  }
+  #head-wrapper-asnd {
+    padding: 26px;
+  }
+}
+@media screen and (max-width: 780px) {
+  #mobile-menu-ignite-asnd {
+    display: block;
+  }
+  #mobile-menu-ignite-asnd.click-to-close {
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 8px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.3);
+    left: 206px;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  #mobile-menu-ignite-asnd.click-to-close .fa-reorder {
+    display: none;
+  }
+  #mobile-menu-ignite-asnd.click-to-close .fa-arrow-left {
+    display: inline;
+  }
+  #main-head-asnd {
+    margin-left: -148px;
+  }
+  #main-head-asnd.show-up {
+    -webkit-box-shadow: 0 0 8px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.3);
+    margin-left: 0;
+  }
+  #head-wrapper-asnd {
+    padding: 26px 42px 26px 16px;
+  }
+}
+
 /* === Body === */
 section.author,
 section.share {
@@ -189,23 +367,21 @@ section.author p.bio {
   line-height: 1.4em;
 }
 blockquote {
-  font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-  font-size: 1.6em;
+  /*font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;*/
+  font-size: 1.1em;
   font-weight: 300;
-  line-height: 1.2em;
+  line-height: 1.4em;
   font-style: italic;
-  text-transform: uppercase;
   border-left: 0.5em solid rgba(0, 0, 0, 0.05);
   margin-left: 1em;
   padding-left: 1em;
 }
 blockquote p {
-  font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-  font-size: 1.6em;
+  /*font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;*/
+  font-size: 1.1em;
   font-weight: 300;
-  line-height: 1.2em;
+  line-height: 1.4em;
   font-style: italic;
-  text-transform: uppercase;
 }
 .post-meta {
   color: #95a5a6;
@@ -229,6 +405,9 @@ div.authorimage {
   background-position: center center !important;
   margin-right: 10px;
   float: left;
+}
+h1.post-title {
+  background-color: #EEEEEE;
 }
 h1.post-title a,
 h1.blog-title a {
